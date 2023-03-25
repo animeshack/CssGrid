@@ -33,5 +33,5 @@ In this example, there is a grid container with three columns, and I'm using jus
 
 Then also using align-content: center to vertically center the grid items within the container.
 
- 
-> Note: all grid-items have thesame stylings
+
+# > Note: all grid-items have thesame stylings
