@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * > *{
+            text-align: center;
+            
+        }
+
+        /*Css Grid*/
+        .grid-container{
+            display: grid;
+            border: 1px solid black;
+            grid-template-columns: auto auto;       
+            margin-bottom: 50px;   
+        }
+        .grid-item{
+            border: 1px solid blue;
+            padding: 30px;
+            background-color:aquamarine;
+        }
+
+        /* Repeat */
+        .grid-contain{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 50px; 
+        }
+        .grid-it{
+            border: 1px solid blue;
+            padding: 30px;
+            background-color:aquamarine;
+        }
+
+        /* minmax */
+        .container{
+            display: grid;
+            border: 1px solid black;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            margin-bottom: 50px; 
+        }
+        .child{
+            border: 1px solid blue;
+            padding: 30px;
+            background-color:aquamarine;
+        }
+
+        /* Grid gap */
+        .parent{
+            display: grid;
+            border: 1px solid black;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px 10px;
+            margin-bottom: 50px; 
+        }
+        .children{
+            border: 2px solid blue;
+            padding: 30px;
+            margin: 4px;
+            background-color:aquamarine;
+        }
+
+        /* Grid-area */
+        .header{
+            display: grid;
+            gap: 5px;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-auto-rows: minmax(100px, 1fr);
+            border: 1px solid black;
+            grid-template-areas:
+            "header header header"
+            "sidebar sidebar aside" 
+            "sidebar sidebar aside"
+            "footer footer footer"
+            ;
+            margin-bottom: 50px; 
+        }
+        .nav{
+            padding: 30px;
+            border: 5px solid blue;
+            background-color:aquamarine;
+        }
+        .grid-item-1{
+            grid-area: header;
+        }
+        .grid-item-2{
+            grid-area: sidebar;
+        }
+        .grid-item-3{
+            grid-area: aside;
+        }
+        .grid-item-4{
+            grid-area: footer;
+        }
+
+        /* Grid-span */
+        .myDiv{
+            display: grid;
+            gap: 5px;
+            grid-template-columns: auto auto;
+            grid-auto-rows: minmax(100px, auto);
+            border: 1px solid black;
+            margin-bottom: 50px; 
+        }
+        .sub-div{
+            border: 5px blue solid;
+            padding: 30px;
+            background-color:aquamarine;
+        }
+        .item-1{
+            grid-row: span 2;
+        }
+        .item-3{
+            grid-row: span 2;
+        }
+        .item-5{
+            grid-column: span 2;
+        }
+
+        /* Alignment */
+        .papa{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-auto-rows: minmax(100px, auto);
+            border: 2px solid black;
+            width: 100%;
+            height: 400px;
+            justify-content: space-around;
+            align-content: center;
+        }
+        .baba{
+            padding: 20px;
+            border: blue 10px solid;
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <p>Css Grid</p>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <!-- Repeat -->
+    <p>Css Grid Repeat</p>
+    <div class="grid-contain">
+        <div class="grid-it">1</div>
+        <div class="grid-it">2</div>
+        <div class="grid-it">3</div>
+        <div class="grid-it">4</div>
+        <div class="grid-it">5</div>
+        <div class="grid-it">6</div>
+    </div>
+
+    <!-- Minmax -->
+    <p>Css Grid Minmax</p>
+    <div class="container">
+        <div class="child">1</div>
+        <div class="child">Lorem Ipsum is simply dummy text of<br>
+            the printing and typesetting industry.<br>
+            Lorem Ipsum has been the industry's standard<br>
+            dummy text ever since the 1500s, <br>
+            when an unknown printer took a galley of type<br>
+            and scrambled it to make a type specimen book. <br>
+            It has survived not only five centuries,<br>
+            but also the leap into electronic typesetting, <br>
+            remaining essentially unchanged. <br>
+            It was popularised in the 1960s with the release of <br>
+            Letraset sheets containing Lorem Ipsum passages, <br>
+            and more recently with desktop publishing software like<br>
+            Aldus PageMaker including versions of Lorem Ipsum.</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+    </div>
+
+    <!-- Gap -->
+    <p>Grid-gap</p>
+    <div class="parent">
+        <div class="children">1</div>
+        <div class="children">2</div>
+        <div class="children">3</div>
+        <div class="children">4</div>
+        <div class="children">5</div>
+        <div class="children">6</div>
+    </div>
+
+    <!-- Grid-area -->
+    <p>Grid-Area</p>
+    <div class="header">
+        <div class="nav grid-item-1">1</div>
+        <div class="nav grid-item-2">2</div>
+        <div class="nav grid-item-3">3</div>
+        <div class="nav grid-item-4">4</div>
+    </div>
+
+    <!-- Grid-span -->
+    <p>Grid-Span</p>
+    <div class="myDiv">
+        <div class="sub-div item-1">1</div>
+        <div class="sub-div item-2">2</div>
+        <div class="sub-div item-3">3</div>
+        <div class="sub-div item-4">4</div>
+        <div class="sub-div item-5">5</div>
+    </div>
+
+    <!-- Alignment -->
+    <p>Alignment</p>
+    <div class="papa">
+        <div class="baba">1</div>
+        <div class="baba">3</div>
+        <div class="baba">4</div>
+    </div>
+</body>
+</html>
