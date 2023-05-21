@@ -25,13 +25,13 @@ For this part of the code, The **grid-area** property is used to position the el
 
 ## Grid-span
 This part works thesame as the grid-area. For the first element with the class "item-1", using the property and the value set to '**grid-row: span 2;**' it is set to span from the start of the first row to the end of the second row. same thing for the element with the class "item-3".
->
->As for the element with the class 'item-5', the property used was 'grid-column' and the value 'span 2' which will set our element with the class "item-5" to start from the first column and to the end of second column i.e to span across 2 column.
+
+As for the element with the class 'item-5', the property used was 'grid-column' and the value 'span 2' which will set our element with the class "item-5" to start from the first column and to the end of second column i.e to span across 2 column.
 
 ## Alignment
->In this example, there is a grid container with three columns, and I'm using justify-content: center to align the grid items to the center of the container. This means that the extra space in the container will be evenly distributed on either side of the grid items.
->
->Then also using align-content: center to vertically center the grid items within the container.
+In this example, there is a grid container with three columns, and I'm using justify-content: center to align the grid items to the center of the container. This means that the extra space in the container will be evenly distributed on either side of the grid items.
+
+Then also using align-content: center to vertically center the grid items within the container.
 
 Live Solution here: [https://animeshack.github.io/CssGrid/](https://animeshack.github.io/CssGrid/)
 
